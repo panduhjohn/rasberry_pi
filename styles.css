@@ -21,3 +21,55 @@ header {
   text-decoration: none;
   font-size: 20px;
 }
+
+#about-main {
+    /* border: 3px solid red; */
+    display: flex;
+    justify-content: space-around;
+    padding-top: 50px;
+}
+
+#about-heading-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 200px;
+}
+
+#about-main-image {
+    height: 700px;
+    width: 500px;
+
+}
+
+#bio-image{
+    height: 300px;
+    width: 285px;
+}
+
+.cards {
+    margin-top: 80px; 
+    padding-top: 30px;
+    padding-bottom: 30px;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #7180B9
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0; 
+  height: 400px;
+  word-wrap: break-word;
+  background-color: white;
+  background-clip: border-box;
+  border: 1px solid black;
+}
