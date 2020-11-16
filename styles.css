@@ -44,7 +44,7 @@ header {
 
 #bio-image{
     height: 300px;
-    width: 285px;
+    width: 310px;
 }
 
 .cards {
@@ -67,9 +67,21 @@ header {
   display: flex;
   flex-direction: column;
   min-width: 0; 
-  height: 400px;
+  height: 500px;
+  width: 20rem;
   word-wrap: break-word;
   background-color: white;
   background-clip: border-box;
   border: 1px solid black;
+}
+
+.card-title{
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card-text {
+    padding-top: 10px;
+    text-align: center;
+    padding: 10px;
 }
