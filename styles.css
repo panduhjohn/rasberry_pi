@@ -8,7 +8,7 @@
 
 header {
   background-color: #2e1780;
-  height: 50px;
+  height: 150px;
 }
 
 .nav-item {
@@ -20,6 +20,12 @@ header {
   color: white;
   text-decoration: none;
   font-size: 20px;
+}
+
+#main-logo {
+    height: 100px;
+    width: 100px;
+    margin-top: 25px;
 }
 
 #about-main {
