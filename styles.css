@@ -8,7 +8,7 @@
 
 header {
   background-color: #2e1780;
-  height: 150px;
+  height: 90px;
 }
 
 .nav-item {
@@ -22,10 +22,17 @@ header {
   font-size: 20px;
 }
 
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 90px;
+}
+
 #main-logo {
-    height: 100px;
-    width: 100px;
-    margin-top: 25px;
+    height: 50px;
+    width: 50px;
+    margin-top: 5px;
 }
 
 #about-main {
@@ -109,3 +116,24 @@ header {
   margin: auto;
   margin-bottom: 40px;
 }
+
+.review-card {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+
+}
+
+.x-button {
+    font-size: 20px;
+    position: relative;
+    top: -90px;
+    left: 200px;
+    cursor: pointer;
+}
+
+.stars {
+    width: 100px;
+}
+
