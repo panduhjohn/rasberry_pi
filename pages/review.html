@@ -60,6 +60,28 @@
             a number
         </p>
 
+        <div>
+            <form id="inquiryForm" class="form">
+                <input type="text" name="review" placeholder="Review" />
+                <div class="star-rating" style="display: inline;" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="saveStarRating(1)">
+                    ⭐️
+                </div>
+                <div class="star-rating" style="display: inline;" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="saveStarRating(2)">
+                    ⭐️
+                </div>
+                <div class="star-rating" style="display: inline;" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="saveStarRating(3)">
+                    ⭐️
+                </div>
+                <div class="star-rating" style="display: inline;" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="saveStarRating(4)">
+                    ⭐️
+                </div>
+                <div class="star-rating" style="display: inline;" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="saveStarRating(5)">
+                    ⭐️
+                </div>
+                <button onclick="submitReview()" type="button">Submit Review</button>
+            </form>
+        </div>
+
         <div class="cards">
             <div class="review-card">
                 <img
