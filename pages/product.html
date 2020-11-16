@@ -5,7 +5,10 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Product - Rasberry Pi</title>    <link href="../styles.css" rel="stylesheet" />
+    <title>Product - Rasberry Pi</title>
+    <link href="../styles.css" rel="stylesheet"/>
+<!--  this allows me to send emails with javascript   -->
+    <script src="https://smtpjs.com/smtp.js"></script>
 
 </head>
 <body>
@@ -13,26 +16,40 @@
     <nav class="navbar">
         <ul>
             <li class="nav-item">
-                <a class="nav-link"  href="../index.html">Home</a>
+                <a class="nav-link" href="../index.html">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"  href="about.html">About</a>
+                <a class="nav-link" href="about.html">About</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"  href="news.html">News</a>
+                <a class="nav-link" href="news.html">News</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"  href="product.html">Product</a>
+                <a class="nav-link" href="product.html">Product</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link"  href="review.html">Reviews</a>
+                <a class="nav-link" href="review.html">Reviews</a>
             </li>
         </ul>
     </nav>
 </header>
 <main>
-    Product
+    <h1 class="inquiry-title">Input your product inquiries here.</h1>
+    <form id="inquiryForm" class="form">
+        <input type="text" name="name" placeholder="Input your name here"/>
+        <input type="text" name="email" placeholder="Input your email here"/>
+        <input type="text" name="subject" placeholder="Input your subject here"/>
+        <textarea name="inquiry" rows="4"></textarea>
+        <button onclick="submitForm()" type="button">Submit Inquiry</button>
+    </form>
+
+    <div id="confirmationMessage" style="display: none">
+        <h2>Thanks for submitting your inquiry, we will get back to you as soon as possible.</h2>
+        <br>
+        <button onclick="showForm()" type="button">Click here if you want to submit another message</button>
+    </div>
 </main>
 
+<script src="../js/product.js"></script>
 </body>
 </html>
