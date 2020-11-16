@@ -1,0 +1,23 @@
+* {
+  /* this affects everything */
+  font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #2e1780;
+  height: 50px;
+}
+
+.nav-item {
+  display: inline;
+  margin: 5%;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
