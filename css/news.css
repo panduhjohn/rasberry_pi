@@ -4,7 +4,8 @@
     justify-content: space-around;
     margin-top: 50px;
     width: 60%;
-    border: 1px solid orange;
+    background-color: aqua;
+    /* border: 1px solid orange; */
 }
 
 #inputs {
@@ -13,7 +14,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     margin: auto;
     margin-top: 50px;
 }
