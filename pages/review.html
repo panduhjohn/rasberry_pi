@@ -1,140 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
+<head>
+    <meta charset="UTF-8"/>
+    <meta
             name="viewport"
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>Review - Rasberry Pi</title>
-        <link href="../styles.css" rel="stylesheet" />
-    </head>
-    <body>
-        <header>
-            <nav class="navbar">
-                <ul>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">
-                            <img
-                                id="main-logo"
-                                src="../assets/mainlogo.png"
-                                alt="mainlogo"
-                            />
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="product.html">Product</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="review.html">Reviews</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>Review</main>
-        <p>
-            This is a page that will be in a card format that will showcase
-            reviews of the product.
-        </p>
-
-        <p>
-            This page should have the following: 3 Reviews of the product, each
-            with a rating out of 5 and a review that accompanies it There should
-            be a way to delete reviews (button on the corner of the card)
-        </p>
-        <p>
-            There should be a way to add a review Have a button that when
-            pressed reveals an add review field which when filled out and
-            submitted will create a review and show it on the page
-        </p>
-        <p>
-            Extra credit opportunity Create a star system, so that when you
-            click 3 stars out of five it’ll actually show stars instead of just
-            a number
-        </p>
-
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Review - Rasberry Pi</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <link href="../css/review.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/d2865da311.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">
+                    <img
+                            id="main-logo"
+                            src="../assets/mainlogo.png"
+                            alt="mainlogo"
+                    />
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="news.html">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="product.html">Product</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review.html">Reviews</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <form id="inquiryForm">
+        <h2>Give your review on Rasberry Pies.</h2>
+        <textarea name="review" cols="100" rows="7"></textarea>
         <div>
-            <form id="inquiryForm" class="form">
-                <input type="text" name="review" placeholder="Review" />
-                <div class="star-rating" style="display: inline;" onmouseover="highlight(1)" onmouseout="unhighlight()" onclick="saveStarRating(1)">
-                    ⭐️
-                </div>
-                <div class="star-rating" style="display: inline;" onmouseover="highlight(2)" onmouseout="unhighlight()" onclick="saveStarRating(2)">
-                    ⭐️
-                </div>
-                <div class="star-rating" style="display: inline;" onmouseover="highlight(3)" onmouseout="unhighlight()" onclick="saveStarRating(3)">
-                    ⭐️
-                </div>
-                <div class="star-rating" style="display: inline;" onmouseover="highlight(4)" onmouseout="unhighlight()" onclick="saveStarRating(4)">
-                    ⭐️
-                </div>
-                <div class="star-rating" style="display: inline;" onmouseover="highlight(5)" onmouseout="unhighlight()" onclick="saveStarRating(5)">
-                    ⭐️
-                </div>
-                <button onclick="submitReview()" type="button">Submit Review</button>
-            </form>
+            <div class="star-rating" style="display: inline;" onmouseover="highlight(1)" onmouseout="unhighlight()"
+                 onclick="saveStarRating(1)">
+                <i class="fas fa-star"></i></div>
+            <div class="star-rating" style="display: inline;" onmouseover="highlight(2)" onmouseout="unhighlight()"
+                 onclick="saveStarRating(2)">
+                <i class="fas fa-star"></i></div>
+            <div class="star-rating" style="display: inline;" onmouseover="highlight(3)" onmouseout="unhighlight()"
+                 onclick="saveStarRating(3)">
+                <i class="fas fa-star"></i></div>
+            <div class="star-rating" style="display: inline;" onmouseover="highlight(4)" onmouseout="unhighlight()"
+                 onclick="saveStarRating(4)">
+                <i class="fas fa-star"></i></div>
+            <div class="star-rating" style="display: inline;" onmouseover="highlight(5)" onmouseout="unhighlight()"
+                 onclick="saveStarRating(5)">
+                <i class="fas fa-star"></i></div>
         </div>
+        <button onclick="submitReview()" type="button">Submit Review</button>
+    </form>
 
-        <div class="cards">
-            <div class="review-card">
-                <img
-                    src="../assets/pie3.jpg"
-                    alt="pies"
-                    height="150px"
-                    width="150px;"
-                />
-                <p>Heres some words about shit</p>
-                <div class="icons">
-                    <div class='stars'>
-                        ⭐️
-                    </div>
-                    <p class="x-button" onclick='deleteReviews(this)'>❌</p>
+
+    <div class="cards">
+        <div class="review-card">
+            <p>Heres some words about shit</p>
+            <div class="icons">
+                <div class='stars'>
+                    ⭐️
                 </div>
+                <p class="x-button" onclick='deleteReviews(this)'><i class="far fa-times-circle"></i></p>
             </div>
         </div>
-        <div class="cards">
-            <div class="review-card">
-                <img
-                    src="../assets/pie3.jpg"
-                    alt="pies"
-                    height="150px"
-                    width="150px;"
-                />
-                <p>Heres some words about shit</p>
-                <div class="icons">
-                    <div class='stars' onclick='addStars()'>
-                        ⭐️
-                    </div>
-                    <p class="x-button" onclick='deleteReviews(this)'>❌</p>
+    </div>
+    <div class="cards">
+        <div class="review-card">
+            <p>Heres some words about shit</p>
+            <div class="icons">
+                <div class='stars' onclick='addStars()'>
+                    ⭐️
                 </div>
+                <p class="x-button" onclick='deleteReviews(this)'><i class="far fa-times-circle"></i></p>
             </div>
         </div>
-        <div class="cards">
-            <div class="review-card">
-                <img
-                    src="../assets/pie3.jpg"
-                    alt="pies"
-                    height="150px"
-                    width="150px;"
-                />
-                <p>Heres some words about shit</p>
-                <div class="icons">
-                    <div class='stars'>
-                        ⭐️
-                    </div>
-
-                   <p class="x-button" onclick='deleteReviews(this)'>❌</p>
+    </div>
+    <div class="cards">
+        <div class="review-card">
+            <p>Heres some words about shit</p>
+            <div class="icons">
+                <div class='stars'>
+                    ⭐️
                 </div>
+
+                <p class="x-button" onclick='deleteReviews(this)'><i class="far fa-times-circle"></i></p>
             </div>
         </div>
-
-        <script src="../js/review.js"></script>
-    </body>
+    </div>
+</main>
+<script src="../js/review.js"></script>
+</body>
 </html>

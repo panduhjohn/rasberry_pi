@@ -116,24 +116,3 @@ header {
   margin: auto;
   margin-bottom: 40px;
 }
-
-.review-card {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 100vw;
-
-}
-
-.x-button {
-    font-size: 20px;
-    position: relative;
-    top: -90px;
-    left: 200px;
-    cursor: pointer;
-}
-
-.stars {
-    width: 100px;
-}
-
