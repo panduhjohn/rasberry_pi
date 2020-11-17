@@ -1,51 +1,66 @@
 #jumbo {
-    height: 600px;
-    width: 100vw;
-    background-image: url('../assets/raspie3.jpg');
-    /* opacity: .5; */
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* border: 2px solid orchid; */
+  height: 600px;
+  width: 100vw;
+  background-image: url("../assets/raspie3.jpg");
+  /* opacity: .5; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* border: 2px solid orchid; */
 }
 
 #jumbo img {
-    /* height: 300px; */
-    width: 100vw;
-    opacity: .5;
+  /* height: 300px; */
+  width: 100vw;
+  opacity: 0.5;
 }
 
 #jumbo h1 {
-    padding-top: 150px;
-    color: whitesmoke;
-    padding-left: 300px;
-    margin: auto;
-
+  padding-top: 150px;
+  color: whitesmoke;
+  padding-left: 300px;
+  margin: auto;
 }
 .dark-background {
-    background-color: rgba(0, 0, 0, 0.3);
-    width: 100vw;
-    height: 600px;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100vw;
+  height: 600px;
 }
 
 #synopsis {
-    padding-top: 10px;
-    margin-top: 130px;
-    height: 600px;
-    width: 100vw;
-    background-color: #F5F6F9;
-    margin-bottom: 100px;
-    text-align: center;
+  padding-top: 10px;
+  height: 600px;
+  width: 100vw;
+  background-color: #f5f6f9;
+  margin-bottom: 100px;
+  text-align: center;
 }
 
-
 #specs {
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-    text-align: center;
-    padding-bottom: 100px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 100px;
 }
 
 #specs p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.buy-links {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 50vh;
+}
+
+.buy-links > * {
+  color: black;
+  font-size: 100px;
+  cursor: pointer;
+}
+
+.buy-links a:hover {
+  color: #7180b9;
 }

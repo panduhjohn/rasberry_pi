@@ -26,12 +26,12 @@ function sendEmail() {
   const subject = form.elements["subject"].value;
 
   Email.send(
-      "daniel.lee@codeimmersives.com",
-      email,
-      subject,
-      inquiry,
-      "smtp.elasticemail.com",
-      "daniel.lee@codeimmersives.com",
-      "DB19A2C1FBCF7AED85CCE0AE5D133D2CA405"
+    "daniel.lee@codeimmersives.com",
+    email,
+    subject,
+    inquiry,
+    "smtp.elasticemail.com",
+    "daniel.lee@codeimmersives.com",
+    "DB19A2C1FBCF7AED85CCE0AE5D133D2CA405"
   );
 }

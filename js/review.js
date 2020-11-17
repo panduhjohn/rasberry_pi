@@ -1,56 +1,55 @@
 let starRating = 0;
 
 function deleteReviews(button) {
-  button.parentNode.parentNode.parentNode.remove()
+  button.parentNode.remove();
 }
 
 function highlight(integer) {
-  const stars = document.querySelectorAll('.star-rating');
+  const stars = document.querySelectorAll(".star-rating");
   for (let i = 0; i < integer; i++) {
-    stars[i].style.color = '#FFD700';
+    stars[i].style.color = "#FFD700";
   }
 }
 
 function unhighlight() {
-  const stars = document.querySelectorAll('.star-rating');
-  stars.forEach(star => star.style.color = 'gray')
-  highlight(starRating)
+  const stars = document.querySelectorAll(".star-rating");
+  stars.forEach((star) => (star.style.color = "gray"));
+  highlight(starRating);
 }
 
 function saveStarRating(integer) {
-  starRating = integer
-  const stars = document.querySelectorAll('.star-rating');
+  starRating = integer;
+  const stars = document.querySelectorAll(".star-rating");
   for (let i = 0; i < integer; i++) {
-    stars[i].style.color = '#FFD700';
+    stars[i].style.color = "#FFD700";
   }
 }
 
-
 function submitReview() {
-  const form = document.getElementById('inquiryForm')
-  console.log(form.elements['review'].value)
+  const form = document.getElementById("inquiryForm");
+  console.log(form.elements["review"].value);
 
-  const reviewValue = form.elements['review'].value;
+  const reviewValue = form.elements["review"].value;
 
   let starHTML = `<div class='stars'>`;
 
   for (let i = 0; i < starRating; i++) {
-    console.log(i)
-    starHTML += `⭐️`
+    console.log(i);
+    starHTML += `⭐️`;
   }
 
-  starHTML+= '</div>'
+  starHTML += "</div>";
 
   const newReview = `
-      <div class="cards">
+      <div class="review-card-container">
         <div class="review-card">
+           ${starHTML}
             <p>${reviewValue}</p>
-            <div class="icons">
-               ${starHTML}
-                <p class="x-button" onclick='deleteReviews(this)'><i class="far fa-times-circle"></i></p>
-            </div>
+            <p class="x-button" onclick="deleteReviews(this)">
+                <i class="far fa-times-circle"></i>
+            </p>
         </div>
-    </div>`
+    </div>`;
 
-    form.insertAdjacentHTML( 'afterend', newReview );
+  form.insertAdjacentHTML("afterend", newReview);
 }

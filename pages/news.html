@@ -1,104 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>News - Rasberry Pi</title>
-        <link href="../styles.css" rel="stylesheet" />
-        <link href="../css/news.css" rel="stylesheet" />
-         <script src="https://kit.fontawesome.com/d2865da311.js" crossorigin="anonymous"></script>
-    </head>
-    <body>
-        <header>
-            <nav class="navbar">
-                <ul>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">
-                            <img
-                                id="main-logo"
-                                src="../assets/mainlogo.png"
-                                alt="mainlogo"
-                            />
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="product.html">Product</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="review.html">Reviews</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="instructions" style='margin: auto; border: 5px solid green; width: 50vw; text-align: center;' >
-                <h3>
-                    This is a page that functionally is very similar to the
-                    review page, however I want it to be a little different:
-                </h3>
-                <p>3 News posts</p>
-                <p>There should be a way to delete a news post</p>
-                <p>There should be a way to add a news post</p>
-                <p>
-                    Main difference is that I want each post to have an image
-                    attached to the post, and some sort of headline and sub
-                    heading
-                </p>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>News - Rasberry Pi</title>
+    <link href="../styles.css" rel="stylesheet" />
+    <link href="../css/news.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/d2865da311.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">
+              <img id="main-logo" src="../assets/mainlogo.png" alt="mainlogo" />
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="news.html">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="product.html">Product</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="review.html">Reviews</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="page-title">Keep up with the latest news about Pies</h1>
+      <h2 class="page-title">Add your own news post</h2>
+      <br />
+      <form id="inputs">
+        <input type="text" name="headline" placeholder="Heading" />
+        <input type="text" name="subheading" placeholder="SubHeading" />
+        <input type="text" name="image" placeholder="Image Link" />
+        <textarea
+          cols="30"
+          rows="7"
+          type="text"
+          name="content"
+          placeholder="Content"
+        ></textarea>
+        <button class="button" type="button" onclick="addCard()">
+          Add Card
+        </button>
+      </form>
 
-            <form id="inputs">
-                <h1>Add a Post</h1>
-                <input type="text" name='headline' placeholder="Heading"/>
-                <input type="text" name='subheading' placeholder="SubHeading"/>
-                <input type="text" name='image' placeholder="Image Link"/>
-                <textarea type="text" name='content' placeholder="Content"></textarea>
-                <button type='button' onclick="addCard()">Add Card</button>
-            </form>
+      <div id="news-posts">
+        <div id="news-image">
+          <img src="../assets/homer.jpg" alt="homer" />
+          <i
+            id="close-card"
+            onclick="removeCard(this)"
+            class="far fa-times-circle"
+          ></i>
+        </div>
+        <div id="news-content">
+          <h3>Headline</h3>
+          <h4>SubHeading</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+            porro.
+          </p>
+        </div>
+      </div>
+      <div id="news-posts">
+        <div id="news-image">
+          <img src="../assets/garrison.jpg" alt="homer" />
+          <i
+            id="close-card"
+            onclick="removeCard(this)"
+            class="far fa-times-circle"
+          ></i>
+        </div>
 
-            <div id="news-posts">
-                <div id='news-image'>
-                    <img src="../assets/homer.jpg" alt="homer">
-                </div>
-                <div id="news-content">
-                    <h3>Headline</h3>
-                    <h4>SubHeading</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, porro.</p>
-                </div>
-                <i id='close-card' onclick='removeCard(this)' class="far fa-times-circle"></i>
-            </div>
-            <div id="news-posts">
-                <div id='news-image'>
-                    <img src="../assets/garrison.jpg" alt="homer">
-                </div>
-                <div id="news-content">
-                    <h3>Headline</h3>
-                    <h4>SubHeading</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, porro.</p>
-                </div>
-                <i id='close-card' onclick='removeCard(this)' class="far fa-times-circle"></i>
-            </div>
-            <div id="news-posts">
-                <div id='news-image'>
-                    <img src="../assets/rick.jpg" alt="homer">
-                </div>
-                <div id="news-content">
-                    <h3>Headline</h3>
-                    <h4>SubHeading</h4>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure, porro.</p>
-                </div>
-                <i id='close-card' onclick='removeCard(this)' class="far fa-times-circle"></i>
-            </div>
-        </main>
-        <script src="../js/news.js"></script>
-    </body>
+        <div id="news-content">
+          <h3>Headline</h3>
+          <h4>SubHeading</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+            porro.
+          </p>
+        </div>
+      </div>
+      <div id="news-posts">
+        <div id="news-image">
+          <img src="../assets/rick.jpg" alt="homer" />
+          <i
+            id="close-card"
+            onclick="removeCard(this)"
+            class="far fa-times-circle"
+          ></i>
+        </div>
+        <div id="news-content">
+          <h3>Headline</h3>
+          <h4>SubHeading</h4>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
+            porro.
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>&copy 2020 - WeSellShit.com</p>
+    </footer>
+    <script src="../js/news.js"></script>
+  </body>
 </html>
