@@ -1,0 +1,24 @@
+main {
+    height: 81vh;
+}
+
+.inquiry-title {
+    text-align: center;
+    margin: 50px auto;
+}
+
+#confirmationMessage {
+    text-align: center;
+    margin: 50px auto;
+}
+
+.form {
+    width: 60%;
+    margin-left: 20%;
+}
+
+.form > * {
+    display: block;
+    margin: auto;
+    margin-bottom: 40px;
+}
