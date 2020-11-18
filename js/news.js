@@ -7,7 +7,16 @@ function addCard() {
   const headline = form.elements["headline"].value;
   const subheading = form.elements["subheading"].value;
   const content = form.elements["content"].value;
-  const image = form.elements["image"].value;
+  let image = form.elements["image"].value;
+
+  if (!headline || !subheading) {
+    alert("Don't spam me bitch!")
+    return
+  }
+
+  if (!image) {
+    image = '../assets/homer.jpg'
+  }
 
   const newPost = `
     <div id='news-posts'>
@@ -25,4 +34,13 @@ function addCard() {
   document
     .querySelector("#news-posts")
     .insertAdjacentHTML("beforebegin", newPost);
+
+  form.parentNode.style.display = 'none';
+  document.getElementById('shareButton').style.display = 'flex'
+}
+
+function showForm(button) {
+ const formContainer = document.getElementById('formContainer');
+ formContainer.style.display = 'block';
+ button.style.display = 'none';
 }

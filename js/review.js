@@ -1,7 +1,7 @@
 let starRating = 0;
 
 function deleteReviews(button) {
-    button.parentNode.remove();
+    button.parentNode.parentNode.remove();
 }
 
 function highlight(integer) {
@@ -27,9 +27,13 @@ function saveStarRating(integer) {
 
 function submitReview() {
     const form = document.getElementById("inquiryForm");
-    console.log(form.elements["review"].value);
-    const inquiryName = form.elements["inquiry-name"].value;
+    const name = form.elements["inquiry-name"].value;
     const reviewValue = form.elements["review"].value;
+
+    if (!name || !reviewValue) {
+        alert('Do not spam!')
+        return
+    }
 
     let starHTML = `<div class='stars'>`;
 
@@ -43,10 +47,11 @@ function submitReview() {
     const newReview = `
       <div class="review-card-container">
         <div class="review-card">
-        ${starHTML}
-        ${inquiryName}
-            <p>${reviewValue}</p>
-           
+            <div class="review-card-content">
+                ${starHTML}
+                <h2>${name} Says...</h2>
+                <p>${reviewValue}</p>
+           </div>
             <p class="x-button" onclick="deleteReviews(this)">
                 <i id='trashcan' class="fas fa-trash-alt"></i>
             </p>
@@ -54,6 +59,14 @@ function submitReview() {
     </div>`;
 
     form.insertAdjacentHTML("afterend", newReview);
+    form.style.display = 'none'
+    document.getElementById('shareButton').style.display = 'flex';
+}
+
+function showForm(button) {
+    const formContainer = document.getElementById('inquiryForm');
+    formContainer.style.display = 'flex';
+    button.style.display = 'none';
 }
 
 

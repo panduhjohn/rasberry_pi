@@ -18,6 +18,7 @@ main {
   background-color: #f5f6f9;
   border: 1px solid #f5f6f9;
   border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 #inputs {
@@ -30,9 +31,16 @@ main {
 }
 
 #inputs > input {
-  margin-bottom: 30px;
-  width: 30%;
-  height: 20px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  width: 400px;
+  height: 50px;
+}
+
+#inputs > textarea {
+  width: 400px;
+  border-radius: 4px;
+  border: 1px solid rgba(0,0,0,0.1)
 }
 
 #news-image img {
@@ -53,8 +61,9 @@ main {
 
 #news-content > * {
   margin-top: 10px;
-  width: 250px;
+  width: 70%;
   margin-bottom: 30px;
+  text-align: center;
 }
 
 #news-image {
@@ -66,4 +75,23 @@ main {
 
 #close-card {
   cursor: pointer;
+  font-size: 30px;
+}
+
+.form-container {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  width: 50%;
+  margin: auto;
+  border-radius: 20px;
+  padding: 20px;
+  padding-bottom: 30px;
+  display: none;
+}
+
+.share.button {
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }

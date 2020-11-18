@@ -7,9 +7,9 @@
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Product - Rasberry Pi</title>
+    <title>Inquiry - Rasberry Pi</title>
     <link href="../styles.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/inquiry.css">
     <!--  this allows me to send emails with javascript   -->
     <script src="https://smtpjs.com/smtp.js"></script>
   </head>
@@ -29,7 +29,7 @@
             <a class="nav-link" href="news.html">News</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="product.html">Product</a>
+            <a class="nav-link" href="inquiry.html">Inquiry</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="review.html">Reviews</a>
@@ -38,8 +38,9 @@
       </nav>
     </header>
     <main>
-      <h1 class="inquiry-title">Input your product inquiries here.</h1>
       <form id="inquiryForm" class="form">
+        <h1 class="inquiry-title">Input your product inquiries here.</h1>
+
         <input type="text" name="name" placeholder="Input your name here" />
         <input type="text" name="email" placeholder="Input your email here" />
         <input
@@ -59,7 +60,7 @@
           possible.
         </h2>
         <br />
-        <button class="button" onclick="showForm()" type="button">
+        <button class="another button" onclick="showForm()" type="button">
           Click here if you want to submit another message
         </button>
       </div>
@@ -68,6 +69,6 @@
     <footer>
       <p>&copy 2020 - WeSellShit.com</p>
     </footer>
-    <script src="../js/product.js"></script>
+    <script src="../js/inquiry.js"></script>
   </body>
 </html>

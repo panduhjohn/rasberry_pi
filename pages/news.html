@@ -1,123 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+<head>
+    <meta charset="UTF-8"/>
     <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <title>News - Rasberry Pi</title>
-    <link href="../styles.css" rel="stylesheet" />
-    <link href="../css/news.css" rel="stylesheet" />
+    <link href="../styles.css" rel="stylesheet"/>
+    <link href="../css/news.css" rel="stylesheet"/>
     <script
-      src="https://kit.fontawesome.com/d2865da311.js"
-      crossorigin="anonymous"
+            src="https://kit.fontawesome.com/d2865da311.js"
+            crossorigin="anonymous"
     ></script>
-  </head>
-  <body>
-    <header>
-      <nav class="navbar">
+</head>
+<body>
+<header>
+    <nav class="navbar">
         <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="../index.html">
-              <img id="main-logo" src="../assets/mainlogo.png" alt="mainlogo" />
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="about.html">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="news.html">News</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="product.html">Product</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="review.html">Reviews</a>
-          </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">
+                    <img id="main-logo" src="../assets/mainlogo.png" alt="mainlogo"/>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="news.html">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="inquiry.html">Inquiry</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review.html">Reviews</a>
+            </li>
         </ul>
-      </nav>
-    </header>
-    <main>
-      <h1 class="page-title">Keep up with the latest news about Pies</h1>
-      <h2 class="page-title">Add your own news post</h2>
-      <br />
-      <form id="inputs">
-        <input type="text" name="headline" placeholder="Heading" />
-        <input type="text" name="subheading" placeholder="SubHeading" />
-        <input type="text" name="image" placeholder="Image Link" />
-        <textarea
-          cols="30"
-          rows="7"
-          type="text"
-          name="content"
-          placeholder="Content"
-        ></textarea>
-        <button class="button" type="button" onclick="addCard()">
-          Add Card
-        </button>
-      </form>
+    </nav>
+</header>
+<main>
+    <h1 class="page-title">Keep up with the latest news about Pies</h1>
 
-      <div id="news-posts">
+    <br/>
+    <button id="shareButton" onclick="showForm(this)" class="share button">Share your thoughts!</button>
+    <div id="formContainer" class="form-container">
+
+        <h2 class="page-title">Have something you want to share?</h2>
+        <h3 class="page-title">Add your own post!</h3>
+        <form id="inputs">
+
+            <input class="input" type="text" name="headline" placeholder="Heading"/>
+            <input class="input" type="text" name="subheading" placeholder="SubHeading"/>
+            <input class="input" type="text" name="image" placeholder="Image Link"/>
+            <textarea
+                    class="input"
+                    cols="30"
+                    rows="7"
+                    type="text"
+                    name="content"
+                    placeholder="Content"
+            ></textarea>
+            <button class="button" type="button" onclick="addCard()">
+                Add Card
+            </button>
+        </form>
+    </div>
+
+    <div id="news-posts">
         <div id="news-image">
-          <img src="../assets/homer.jpg" alt="homer" />
-          <i
-            id="close-card"
-            onclick="removeCard(this)"
-            class="far fa-times-circle"
-          ></i>
+            <img src="../assets/rpi-400.jpg" alt="RPI 400"/>
+            <i
+                    id="close-card"
+                    onclick="removeCard(this)"
+                    class="far fa-times-circle"
+            ></i>
         </div>
         <div id="news-content">
-          <h3>Headline</h3>
-          <h4>SubHeading</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
-            porro.
-          </p>
+            <h3>Hands-on with the Raspberry Pi 400: Pleased and impressed</h3>
+            <h4>I was fortunate to get one. Here are my initial impressions and experiences with it.</h4>
+            <p>
+                Well, first of all, hello – and I'm glad to be back. I've spent the past two and a half years teaching
+                at the Amsterdam University of Applied Sciences (AUAS). I initially thought that I would be able to keep
+                up this blog while doing that, but it didn't take long for me to realize how impractical that was. Now
+                that I am done at the AUAS, I am very pleased to be writing here again.
+                <br>
+                <br>
+                <a target="_blank"
+                   href="https://www.zdnet.com/article/hands-on-with-the-raspberry-pi-400-pleased-and-impressed/">Read
+                    More</a>
+            </p>
         </div>
-      </div>
-      <div id="news-posts">
+    </div>
+    <div id="news-posts">
         <div id="news-image">
-          <img src="../assets/garrison.jpg" alt="homer" />
-          <i
-            id="close-card"
-            onclick="removeCard(this)"
-            class="far fa-times-circle"
-          ></i>
+            <img src="../assets/Odroid_Lead.jpeg" alt="Raspberry Pi - Blue"/>
+            <i
+                    id="close-card"
+                    onclick="removeCard(this)"
+                    class="far fa-times-circle"
+            ></i>
         </div>
 
         <div id="news-content">
-          <h3>Headline</h3>
-          <h4>SubHeading</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
-            porro.
-          </p>
+            <h3>Odroid XU4 vs Raspberry Pi 4: The Differences</h3>
+            <h4>The popular Raspberry Pi 4 was released in June 2019. Read on to see how it compares with a competitor:
+                It's Odroid XU4 vs. Raspberry Pi 4!</h4>
+            <p>
+                Back in 1976, one of the world’s first single-board computers (SBCs), the “Dyna-micro“, was released.
+                Since then, SBCs have been integral in the development of computing. They were prominent in the early
+                history of home computers, as seen in the BBC Micro.
+                <br>
+                <br>
+                <a target="_blank" href="https://all3dp.com/2/odroid-vs-raspberry-pi-difference/">Read More</a>
+            </p>
         </div>
-      </div>
-      <div id="news-posts">
+    </div>
+    <div id="news-posts">
         <div id="news-image">
-          <img src="../assets/rick.jpg" alt="homer" />
-          <i
-            id="close-card"
-            onclick="removeCard(this)"
-            class="far fa-times-circle"
-          ></i>
+            <img src="../assets/enterprise.png" alt="Nice logos"/>
+            <i
+                    id="close-card"
+                    onclick="removeCard(this)"
+                    class="far fa-times-circle"
+            ></i>
         </div>
         <div id="news-content">
-          <h3>Headline</h3>
-          <h4>SubHeading</h4>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure,
-            porro.
-          </p>
+            <h3>
+                7 ways to use Raspberry Pi in enterprise IT
+            </h3>
+            <h4>Consider these ways enterprise IT pros can use Raspberry Pi devices</h4>
+            <p>
+                While pie may or may not be the next big adventure in pandemic baking, Raspberry Pi has been growing as
+                a trend among enterprise IT pros for years.
+
+                Beloved for its low cost, flexibility, and ease of use, Raspberry Pi devices have enabled teams to
+                create, experiment, test, and add value to the work they are doing. As the end of the year approaches,
+                consider how Raspberry Pi can help your team connect in new ways while building value for the future.
+                <br>
+                <br>
+                <a target="_blank"
+                   href="https://enterprisersproject.com/article/2020/11/raspberry-pi-7-enterprise-it-uses">Read
+                    More</a>
+            </p>
         </div>
-      </div>
-    </main>
-    <footer>
-      <p>&copy 2020 - WeSellShit.com</p>
-    </footer>
-    <script src="../js/news.js"></script>
-  </body>
+    </div>
+</main>
+<footer>
+    <p>&copy 2020 - WeSellShit.com</p>
+</footer>
+<script src="../js/news.js"></script>
+</body>
 </html>

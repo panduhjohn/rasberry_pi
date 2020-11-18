@@ -35,7 +35,7 @@
                         <a class="nav-link" href="news.html">News</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="product.html">Product</a>
+                        <a class="nav-link" href="inquiry.html">Inquiry</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="review.html">Reviews</a>
@@ -44,10 +44,12 @@
             </nav>
         </header>
         <main>
+            <button id="shareButton" onclick="showForm(this)" class="share button">Add your own review!</button>
+
             <form id="inquiryForm">
                 <h2>Give your review on Rasberry Pies.</h2>
                 <input name='inquiry-name'  type="text" placeholder="Enter Name"/>
-                <textarea name="review" cols="100" rows="7" placeholder="Write Review"></textarea>
+                <textarea name="review" placeholder="Write Review"></textarea>
                 <div>
                     <div
                         class="star-rating"
@@ -102,8 +104,15 @@
 
             <div class="review-card-container">
                 <div class="review-card">
-                    <div class="stars">⭐️</div>
-                    <p>This is bullshit, I ordered a Raspberry Pi and received an actual slice of pie. Idiots work here.</p>
+                    <div class="review-card-content">
+                        <div class="stars">
+                            ⭐️⭐️⭐️
+                        </div>
+                        <h2>Antonio T. Says..</h2>
+                        <p>This product did not live up to my expectations.
+                        <br> However my experience with this product was decent.
+                        </p>
+                    </div>
                     <p class="x-button" onclick="deleteReviews(this)">
                         <i id='trashcan' class="fas fa-trash-alt"></i>
                     </p>
@@ -111,8 +120,13 @@
             </div>
             <div class="review-card-container">
                 <div class="review-card">
-                    <div class="stars" onclick="addStars()">⭐️</div>
-                    <p>I ordered a pie and they sent some computer chip thing. I cant eat this. This company sucks.</p>
+                    <div class="review-card-content">
+                        <div class="stars">
+                            ⭐️
+                        </div>
+                        <h2>John Stillwell Says..</h2>
+                        <p>I really hate this product, it was such a waste of money. It crumbled into dust when I took it out of the box!</p>
+                    </div>
                     <p class="x-button" onclick="deleteReviews(this)">
                         <i id='trashcan' class="fas fa-trash-alt"></i>
                     </p>
@@ -120,8 +134,17 @@
             </div>
             <div class="review-card-container">
                 <div class="review-card">
-                    <div class="stars">⭐️⭐️⭐️⭐️⭐️</div>
-                    <p>They're paying me 20 dollars to give them 5 stars. Will update if they don't pay up.</p>
+                    <div class="review-card-content">
+                        <div class="stars">
+                            ⭐️⭐️⭐️⭐️
+                        </div>
+                        <h2>Daniel Lee Says..</h2>
+                        <p>
+                            This product was the bomb!
+                            <br>
+                            I created a mini computer with this!
+                        </p>
+                    </div>
                     <p class="x-button" onclick="deleteReviews(this)">
                         <i id='trashcan' class="fas fa-trash-alt"></i>
                     </p>

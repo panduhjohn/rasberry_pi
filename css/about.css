@@ -1,0 +1,49 @@
+#about-main {
+  /* border: 3px solid red; */
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+#about-heading-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#about-heading-text > * {
+  font-family: ‘Indie Flower’, cursive;
+  margin-bottom: 20px;
+}
+
+#about-heading-text p {
+  font-size: 30px;
+  text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+  0px 8px 13px rgba(0,0,0,0.1),
+  0px 18px 23px rgba(0,0,0,0.1);
+}
+
+#about-heading-text h1 {
+  font-size: 46px;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+  0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+#about-main-image {
+  height: 700px;
+  width: 500px;
+}
+
+#bio-image {
+  height: 300px;
+  width: 100.2%;
+  filter: blur(2px);
+  opacity: 0.8;
+}
+#bio-image:hover {
+  height: 300px;
+  width: 100.2%;
+  filter: blur(0px);
+  opacity: 1;
+  transition: all 0.5s linear;
+}
