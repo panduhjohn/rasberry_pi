@@ -69,6 +69,17 @@ header {
 #bio-image {
   height: 300px;
   width: 100.2%;
+  filter: blur(2px);
+  opacity: .8;
+  
+}
+#bio-image:hover {
+  height: 300px;
+  width: 100.2%;
+  filter: blur(0px);
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  scale: 1.2;
 }
 
 .cards {
@@ -146,3 +157,4 @@ footer {
   color: white;
   border-radius: 10px;
 }
+

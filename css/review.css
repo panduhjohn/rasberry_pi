@@ -4,6 +4,7 @@
   justify-content: space-around;
   background-color: #f5f6f9;
   width: 60vw;
+  height: 200px;
   margin: 20px auto;
 }
 
@@ -41,4 +42,8 @@
 
 #inquiryForm > * {
   margin-bottom: 50px;
+}
+
+#trashcan {
+    color: red;
 }

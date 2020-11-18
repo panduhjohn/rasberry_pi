@@ -43,10 +43,12 @@ function submitReview() {
   const newReview = `
       <div class="review-card-container">
         <div class="review-card">
+        
            ${starHTML}
             <p>${reviewValue}</p>
+           
             <p class="x-button" onclick="deleteReviews(this)">
-                <i class="far fa-times-circle"></i>
+                <i id='trashcan' class="fas fa-trash-alt"></i>
             </p>
         </div>
     </div>`;
