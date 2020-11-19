@@ -47,3 +47,34 @@
   opacity: 1;
   transition: all 0.5s linear;
 }
+
+.newsletter {
+  margin-top: 100px;
+  background-image: url('../assets/newsletter.png');
+  height: 700px;
+  width: 100vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 100px;
+}
+
+.newsletter div {
+  margin-bottom: 200px;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-input {
+  height: 60px;
+  width: 300px;
+  margin-top: 20px;
+  width: 400px;
+}
+
+.cards {
+  margin-top: 0;
+}
+

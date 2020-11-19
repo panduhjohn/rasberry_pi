@@ -1,100 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
+<head>
+    <meta charset="UTF-8"/>
+    <meta
             name="viewport"
             content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-        />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
 
-        <title>About - Rasberry Pi</title>
-        <link href="../styles.css" rel="stylesheet" />
-        <link href="../css/about.css" rel="stylesheet" />
-        <link rel=“preconnect” href=“https://fonts.gstatic.com”> <link
-        href=“https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap”
-        rel=“stylesheet”>
-    </head>
-    <body>
-        <header>
-            <nav class="navbar">
-                <ul>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">
-                            <img
-                                id="main-logo"
-                                src="../assets/mainlogo.png"
-                                alt="mainlogo"
-                            />
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="news.html">News</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="inquiry.html">Inquiry</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="review.html">Reviews</a>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+    <title>About - Rasberry Pi</title>
+    <link href="../styles.css" rel="stylesheet"/>
+    <link href="../css/about.css" rel="stylesheet"/>
+    <link rel=“preconnect” href=“https://fonts.gstatic.com”>
+    <link
+            href=“https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap”
+            rel=“stylesheet”>
+    <!--  this allows me to send emails with javascript   -->
+    <script src="https://smtpjs.com/smtp.js"></script>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <ul>
+            <li class="nav-item">
+                <a class="nav-link" href="../index.html">
+                    <img
+                            id="main-logo"
+                            src="../assets/mainlogo.png"
+                            alt="mainlogo"
+                    />
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="news.html">News</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="inquiry.html">Inquiry</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="review.html">Reviews</a>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-        <main>
-            <div id="about-main">
-                <div id="about-heading-text">
-                    <h1>Who are we?</h1>
-                    <p>
-                        We are a ragtag group of web developers and Pie
-                        salesman.
-                    </p>
-                    <p>We love pie and tea.</p>
-                </div>
-                <img id="about-main-image" src="../assets/pie2.jpg" alt="pie" />
+<main>
+    <div id="about-main">
+        <div id="about-heading-text">
+            <h1>Who are we?</h1>
+            <p>
+                We are a ragtag group of web developers and Pie
+                salesman.
+            </p>
+            <p>We love pie and tea.</p>
+        </div>
+        <img id="about-main-image" src="../assets/pie2.jpg" alt="pie"/>
+    </div>
+    <div class="newsletter">
+        <div>
+            <input id="email" class="newsletter-input" type="email" placeholder="you@email.com"/>
+            <button onclick="subscribe()" class="button">Subscribe</button>
+        </div>
+    </div>
+
+    <div class="cards">
+        <div class="card">
+            <img src="../assets/daniel.jpg" id="bio-image" alt="..."/>
+            <div class="card-body">
+                <h2 class="card-title">Daniel</h2>
+                <p class="card-text">
+                    Uhhh, I guess... I'm a fullstack developer.
+                </p>
             </div>
-
-            <div class="cards">
-                <div class="card">
-                    <img src="../assets/daniel.jpg" id="bio-image" alt="..." />
-                    <div class="card-body">
-                        <h2 class="card-title">Daniel</h2>
-                        <p class="card-text">
-                            Uhhh, I guess... I'm a fullstack developer.
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../assets/antonio.jpg" id="bio-image" alt="..." />
-                    <div class="card-body">
-                        <h2 class="card-title">Antonio</h2>
-                        <p class="card-text">
-                            Pilot-Retired. Working on being an astronaut.
-                            <br />
-                            Looks to be the first man to have tea-time in space!
-                        </p>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="../assets/stilw.jpg" id="bio-image" alt="..." />
-                    <div class="card-body">
-                        <h2 class="card-title">John</h2>
-                        <p class="card-text">
-                            I like to jump out of airplanes and off bridges.
-                        </p>
-                    </div>
-                </div>
-
-
-
-                </div>
+        </div>
+        <div class="card">
+            <img src="../assets/antonio.jpg" id="bio-image" alt="..."/>
+            <div class="card-body">
+                <h2 class="card-title">Antonio</h2>
+                <p class="card-text">
+                    Pilot-Retired. Working on being an astronaut.
+                    <br/>
+                    Looks to be the first man to have tea-time in space!
+                </p>
             </div>
-        </main>
-        <footer>
-            <p>&copy 2020 - WeSellShit.com</p>
-        </footer>
-    </body>
+        </div>
+        <div class="card">
+            <img src="../assets/stilw.jpg" id="bio-image" alt="..."/>
+            <div class="card-body">
+                <h2 class="card-title">John</h2>
+                <p class="card-text">
+                    I like to jump out of airplanes and off bridges.
+                </p>
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+</main>
+<footer>
+    <p>&copy 2020 - WeSellShit.com</p>
+</footer>
+
+<script src="../js/about.js"></script>
+
+</body>
 </html>
