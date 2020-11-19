@@ -19,6 +19,9 @@
   color: whitesmoke;
   padding-left: 300px;
   margin: auto;
+  font-family: 'Faster One', cursive;
+  font-size: 80px;
+  color: whitesmoke;
 }
 .dark-background {
   background-color: rgba(0, 0, 0, 0.3);
